@@ -1,0 +1,196 @@
+/* Global */
+
+:root {
+  --primary-color: #005a34;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 42rem;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #0f0f0f;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.counter-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+.options-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Edit */
+
+#color-option {
+  content: url(../assets/icons/edit-light.svg);
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.options-element {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  transform-origin: center;
+  transition: 0.2s ease transform, 0.2s ease filter;
+  cursor: pointer;
+}
+
+.options-element:hover {
+  transform: scale(0.95);
+  filter: brightness(90%);
+}
+
+.options-element:active {
+  transform: scale(0.9);
+  filter: brightness(85%);
+}
+
+/* Reset */
+
+#reset-toggle {
+  content: url(../assets/icons/reset-light.svg);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  margin-left: 0;
+  transform-origin: center;
+}
+
+#reset-toggle.inactive-reset {
+  filter: brightness(50%);
+  pointer-events: none;
+}
+
+/* Incrementor */
+
+.counter-controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counter-display {
+  order: -1;
+  align-content: center;
+  width: 100%;
+  height: 40vh;
+  padding: 13px;
+  border: 1px solid #ffffff;
+  background-color: var(--primary-color);
+  font-size: 65px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.1s ease border, 0.1s ease color;
+}
+
+#counter-increment {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#counter-decrement {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.counter-button {
+  width: 50%;
+  height: 60vh;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ffffff;
+  background-color: var(--primary-color);
+  font-size: 45px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.1s ease border, 0.1s ease color, 0.2s ease filter;
+}
+
+.counter-button:hover {
+  filter: brightness(90%);
+}
+
+.counter-button:active {
+  filter: brightness(85%);
+}
+
+.counter-button.active-button {
+  filter: brightness(85%);
+}
+
+/* RWD */
+
+@media (min-width: 1024px) {
+  .counter-wrapper {
+    gap: 10px;
+  }
+
+  #color-option {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .options-element {
+    width: 30px;
+    height: 30px;
+  }
+
+  #reset-toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+  }
+
+  .counter-controls {
+    flex-wrap: nowrap;
+  }
+
+  .counter-display {
+    order: 0;
+    height: auto;
+    font-size: 30px;
+  }
+
+  #counter-increment {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  #counter-decrement {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .counter-button {
+    width: auto;
+    height: auto;
+    font-size: 30px;
+  }
+}
