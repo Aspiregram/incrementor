@@ -44,12 +44,13 @@ button {
 /* Edit */
 
 #color-option {
-  content: url(../assets/icons/edit-light.svg);
+  content: url(../assets/icons/edit.svg);
   position: absolute;
   top: 16px;
   left: 16px;
   border: none;
   background-color: transparent;
+  filter: invert(0);
 }
 
 .options-element {
@@ -74,15 +75,16 @@ button {
 /* Reset */
 
 #reset-toggle {
-  content: url(../assets/icons/reset-light.svg);
+  content: url(../assets/icons/reset.svg);
   position: absolute;
   top: 16px;
   right: 16px;
   margin-left: 0;
+  filter: invert(0);
 }
 
 #reset-toggle.inactive-reset {
-  filter: brightness(50%);
+  filter: brightness(50%) !important;
   pointer-events: none;
 }
 

@@ -60,16 +60,10 @@ function pickColor(pickedColor) {
   });
 
   if (screen.width <= 1024) {
-    const iconBrightness = isBright ? "dark" : "light";
+    const iconBrightness = isBright ? "1" : "0";
 
-    colorOption.style.setProperty(
-      "content",
-      `url(../assets/icons/edit-${iconBrightness}.svg)`
-    );
-    resetToggle.style.setProperty(
-      "content",
-      `url(../assets/icons/reset-${iconBrightness}.svg)`
-    );
+    colorOption.style.setProperty("filter", `invert(${iconBrightness})`);
+    resetToggle.style.setProperty("filter", `invert(${iconBrightness})`);
   }
 
   localStorage.setItem("currentColor", pickedColor);
@@ -78,23 +72,11 @@ function pickColor(pickedColor) {
 // Creating a function to update the SVGs' state
 function updateIconState() {
   if (screen.width > 1024) {
-    colorOption.style.setProperty(
-      "content",
-      "url(../assets/icons/edit-light.svg)"
-    );
-    resetToggle.style.setProperty(
-      "content",
-      "url(../assets/icons/reset-light.svg)"
-    );
+    colorOption.style.setProperty("filter", "invert(0)");
+    resetToggle.style.setProperty("filter", "invert(0)");
   } else if (screen.width <= 1024 && pickColor(colorOption.value) >= 128) {
-    colorOption.style.setProperty(
-      "content",
-      "url(../assets/icons/edit-dark.svg)"
-    );
-    resetToggle.style.setProperty(
-      "content",
-      "url(../assets/icons/reset-dark.svg)"
-    );
+    colorOption.style.setProperty("filter", "invert(1)");
+    resetToggle.style.setProperty("filter", "invert(1)");
   }
 }
 
