@@ -79,7 +79,6 @@ button {
   top: 16px;
   right: 16px;
   margin-left: 0;
-  transform-origin: center;
 }
 
 #reset-toggle.inactive-reset {
