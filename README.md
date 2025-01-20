@@ -6,7 +6,7 @@
 
 An increment and decrement function built with HTML, CSS and JavaScript. This project is designed to improve coding skills, logical thinking, and web design knowledge.
 
-## Table of Contents
+## 📖 Table of Contents
 
 - [About](#-about)
 - [Features](#-features)
@@ -15,14 +15,14 @@ An increment and decrement function built with HTML, CSS and JavaScript. This pr
 
 ## ❓ About
 
-**Incrementor** is a straightforward project that provides basic increment and decrement functionality, allowing users to increase or decrease the counter with button clicks or key inputs. This project was idealized as a way to improve front-end skills, using HTML for structure, CSS for styling and JavaScript for functionality.
+**Incrementor** is a straightforward project that allows users to increase or decrease a counter with button clicks or key inputs. This project was idealized as a way to improve front-end skills, using HTML for structure, CSS for styling and JavaScript for functionality.
 
 ## ✨ Features
 
-- **Increment/decrement counter**: Easily increase or decrease the counter by one with button clicks or key inputs.
-- **Resettable counter**: A reset feature to set the counter back to zero.
-- **Customizable colors**: Fully customizable colors for counter and buttons.
-- **Simple interface**: Minimalist design with easy-to-use interface elements.
+- **Increment/decrement counter**: Increase or decrease a counter with button clicks or key inputs.
+- **Resettable counter**: Reset a counter back to zero.
+- **Customizable colors**: Customize the UI with any given color.
+- **Counter/colors storage**: Your current counter and chosen colors are automatically saved in a local storage.
 
 ## 🛠️ Installation
 
