@@ -35,10 +35,10 @@ To use the **Incrementor** locally:
 # Open a terminal (PowerShell for Windows, Terminal for macOS and Linux console for Linux)
 
 # Clone the repository
-git clone https://github.com/Aspiregram/Incrementor.git
+git clone https://github.com/Aspiregram/incrementor.git
 
 # Navigate to the project directory
-cd Incrementor
+cd incrementor
 
 # Run index.html
 ```
